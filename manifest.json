@@ -1,0 +1,40 @@
+{
+	"name": "Groover",
+	"version": "1.0",
+	"description": "makes Grooveshark rad.",
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://grooveshark.com/*",
+				"https://grooveshark.com/*"
+			],
+			"css": [
+				"mystyles.css"
+			],
+			"js": [
+				"zepto.js",
+				"app.js"
+			]
+		}
+	],
+	"page_action" : {
+		"default_icon" : "icon-19.png",
+		"default_title" : "This is rad"
+	},
+	"permissions" : [
+		"tabs",
+		"https://news.ycombinator.com/rss",
+		"http://grooveshark.com/*",
+		"https://grooveshark.com/*"
+	],
+	"icons" : {
+		"48" : "icon-48.png",
+		"128" : "icon-128.png"
+	},
+	"manifest_version": 2
+}
